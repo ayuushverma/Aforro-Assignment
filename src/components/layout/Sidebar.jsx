@@ -11,7 +11,7 @@ import {
 import SidebarItem from "./SidebarItem";
 
 const menus = [
-  { name: "Dashboard", path: "/dashboard", icon: Squares2X2Icon },
+  { name: "Dashboard", path: "/", icon: Squares2X2Icon },
   { name: "Leaderboard", path: "/leaderboard", icon: TrophyIcon },
   { name: "Orders", path: "/orders", icon: ShoppingBagIcon },
   { name: "Products", path: "/products", icon: CubeIcon },

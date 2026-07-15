@@ -6,6 +6,7 @@ const SidebarItem = ({ item }) => {
   return (
     <NavLink
       to={item.path}
+      end={item.path === "/"}
       className={({ isActive }) =>
         `flex items-center gap-3 w-full px-4 py-3 rounded-xl transition ${
           isActive ? "bg-indigo-600 text-white" : "text-gray-500 hover:bg-gray-100"
