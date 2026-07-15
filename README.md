@@ -33,3 +33,6 @@ A React + Vite dashboard app with a sidebar layout, analytics cards, charts, and
 - The public API used is https://jsonplaceholder.typicode.com/users.
 - Axios is used for API requests to keep the data fetching logic simple and readable.
 - The table currently displays the required columns: Name, Email, Company Name, and City.
+
+# Deployed Link
+- https://aforro-assignment-ciulabghh-ayuushvermas-projects.vercel.app/
