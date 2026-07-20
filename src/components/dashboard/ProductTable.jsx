@@ -43,7 +43,7 @@ const products = [
 
 const ProductTable = () => {
   return (
-    <div className="bg-white rounded-lg sm:rounded-2xl shadow-sm h-auto md:h-[360px] min-h-[300px] md:min-h-[350px] p-3 sm:p-4 pb-4 sm:pb-6 overflow-x-auto">
+    <div className="bg-white rounded-lg sm:rounded-2xl shadow-sm h-auto md:h-[360px] min-h-[300px] md:min-h-[350px] p-3 sm:p-4 pb-4 sm:pb-6">
       <h2 className="text-base sm:text-lg font-semibold mb-4 sm:mb-6">Top Products</h2>
 
       <div className="mb-4 hidden grid-cols-[30px_1fr_1.5fr_auto] sm:grid-cols-[40px_1fr_1.5fr_auto] gap-2 sm:gap-4 text-xs sm:text-sm font-semibold text-slate-400 md:grid">
@@ -64,7 +64,7 @@ const ProductTable = () => {
               <p className="text-xs sm:text-sm font-medium text-slate-900 truncate">{product.name}</p>
             </div>
             <div className="min-w-0">
-              <div className={`h-2 sm:h-2.5 w-full overflow-hidden rounded-full ${product.badgeBg}`}>
+              <div className={`h-2 sm:h-2.5 w-full  rounded-full ${product.badgeBg}`}>
                 <div className={`${product.barColor} h-full rounded-full`} style={{ width: `${product.percent}%` }} />
               </div>
             </div>

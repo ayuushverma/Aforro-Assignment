@@ -8,6 +8,7 @@ import salereportImg from "../../assets/salereport.png";
 import messageImg from "../../assets/message.png";
 import settingImg from "../../assets/setting.png";
 import logoutImg from "../../assets/logout.png";
+import buyhere from "../../assets/buyhere.png";
 
 const menus = [
   { name: "Dashboard", path: "/", icon: DashboardIcon },
@@ -22,7 +23,7 @@ const menus = [
 
 const Sidebar = () => {
   return (
-    <aside className="hidden lg:flex w-full lg:w-[270px] bg-white flex-col justify-between min-h-screen px-4 sm:px-6 py-6 pt-15 lg:sticky lg:top-0 lg:h-screen">
+    <aside className="hidden lg:flex w-full lg:w-[270px] bg-white flex-col justify-between min-h-screen px-4 sm:px-6 py-6 pt-15">
 
       <div>
         <div className="flex items-center gap-2 mb-8">
@@ -40,41 +41,8 @@ const Sidebar = () => {
 
         </div>
 
-        <div className="relative mt-95">
-          <div className="relative overflow-hidden rounded-[24px] p-6 text-white" style={{ background: 'linear-gradient(135deg,#5D5FEF 0%, #6E63F7 100%)' }}>
-            {/* decorative ellipses (radial gradients to match Figma) */}
-            <div
-            className="absolute rounded-full bg-white/10 z-0"
-            style={{
-              width: "180px",
-              height: "180px",
-              top: "-85px",
-              right: "-60px",
-            }}
-          />
-
-            <div
-              className="absolute rounded-full bg-white/10 z-0"
-              style={{
-                width: "220px",
-                height: "220px",
-                bottom: "-120px",
-                left: "-90px",
-              }}
-            />
-
-            <div className="flex flex-col items-center text-center">
-              <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-white">
-                <img src={Dabanglogo} alt="Dabang Pro" className="h-6 w-6" />
-              </div>
-
-              <h3 className="font-semibold text-lg text-white">Dabang Pro</h3>
-
-              <p className="text-sm mt-2 text-white/90 max-w-[180px]">Get access to all features on tetumbas</p>
-
-              <button className="mt-5 rounded-2xl bg-white py-2 px-6 font-semibold text-[#5D5FEF] ">Get Pro</button>
-            </div>
-          </div>
+        <div className="relative top-100" >
+          <img src={buyhere} alt="Buy Here" className="w-full h-auto mt-8 rounded-lg" />
         </div>
 
       </div>

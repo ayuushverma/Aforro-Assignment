@@ -39,29 +39,47 @@ const TargetChart = () => {
         </ResponsiveContainer>
       </div>
 
-      <div className="mt-3 sm:mt-4 grid grid-cols-1 gap-2 sm:gap-3 md:grid-cols-2">
-        <div className="flex items-center gap-2 sm:gap-3 rounded-lg sm:rounded-2xl border border-slate-200 bg-slate-50 px-3 sm:px-4 py-2 sm:py-3">
-          <div className="flex h-8 w-8 sm:h-10 sm:w-10 items-center justify-center rounded-lg sm:rounded-2xl bg-emerald-100 text-emerald-700 flex-shrink-0">
-            <BsBag className="h-4 w-4" />
-          </div>
-          <div className="flex-1">
-            <p className="text-xs sm:text-sm text-slate-500 font-medium">Reality Sales</p>
-            <p className="text-base sm:text-lg font-semibold text-slate-900">8.823</p>
-            <p className="text-xs text-slate-400">Global</p>
-          </div>
-        </div>
-
-        <div className="flex items-center gap-2 sm:gap-3 rounded-lg sm:rounded-2xl border border-slate-200 bg-slate-50 px-3 sm:px-4 py-2 sm:py-3">
-          <div className="flex h-8 w-8 sm:h-10 sm:w-10 items-center justify-center rounded-lg sm:rounded-2xl bg-amber-100 text-amber-700 flex-shrink-0">
-            <BsStar className="h-4 w-4" />
-          </div>
-          <div className="flex-1">
-            <p className="text-xs sm:text-sm text-slate-500 font-medium">Target Sales</p>
-            <p className="text-base sm:text-lg font-semibold text-slate-900">12.122</p>
-            <p className="text-xs text-slate-400">Commercial</p>
-          </div>
-        </div>
+      <div className="flex flex-row w-full">
+  <div className="mt-3 sm:mt-4 flex flex-col lg:flex-row gap-2 sm:gap-3 w-full">
+    
+    <div className="flex flex-1 min-w-0 items-center gap-2 rounded-lg border border-slate-200 bg-slate-50 px-3 py-2">
+      <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-emerald-100 text-emerald-700 flex-shrink-0">
+        <BsBag className="h-4 w-4" />
       </div>
+
+      <div className="min-w-0">
+        <p className="text-[10px] sm:text-xs text-slate-500 font-medium truncate">
+          Reality Sales
+        </p>
+        <p className="text-sm sm:text-base font-semibold text-slate-900 truncate">
+          8.823
+        </p>
+        <p className="text-[10px] text-slate-400 truncate">
+          Global
+        </p>
+      </div>
+    </div>
+
+    <div className="flex flex-1 min-w-0 items-center gap-2 rounded-lg border border-slate-200 bg-slate-50 px-3 py-2">
+      <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-amber-100 text-amber-700 flex-shrink-0">
+        <BsStar className="h-4 w-4" />
+      </div>
+
+      <div className="min-w-0">
+        <p className="text-[10px] sm:text-xs text-slate-500 font-medium truncate">
+          Target Sales
+        </p>
+        <p className="text-sm sm:text-base font-semibold text-slate-900 truncate">
+          12.122
+        </p>
+        <p className="text-[10px] text-slate-400 truncate">
+          Commercial
+        </p>
+      </div>
+    </div>
+
+  </div>
+</div>
     </div>
   );
 };
