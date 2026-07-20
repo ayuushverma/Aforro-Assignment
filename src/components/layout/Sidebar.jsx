@@ -22,7 +22,7 @@ const menus = [
 
 const Sidebar = () => {
   return (
-    <aside className="w-[270px] bg-white flex flex-col justify-between min-h-screen px-6 py-6 pt-15  ">
+    <aside className="hidden lg:flex w-full lg:w-[270px] bg-white flex-col justify-between min-h-screen px-4 sm:px-6 py-6 pt-15 lg:sticky lg:top-0 lg:h-screen">
 
       <div>
         <div className="flex items-center gap-2 mb-8">
