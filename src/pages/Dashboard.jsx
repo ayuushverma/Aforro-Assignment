@@ -26,7 +26,7 @@ const Dashboard = () => {
           <StatsSection />
         </div>
 
-        <div className="md:col-span-2 lg:col-span-4 h-auto md:h-[360px] min-h-[300px] md:min-h-[350px] mt-2 md:mt-0">
+        <div className="md:col-span-2 lg:col-span-4 h-auto md:h-[360px] min-h-[300px] md:min-h-[350px] mt-2 md:mt-3">
           <VisitorChart />
         </div>
 
