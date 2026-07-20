@@ -41,10 +41,9 @@ const Sidebar = () => {
 
         </div>
 
-        <div className="relative top-100" >
+        <div className="relative top-20" >
           <img src={buyhere} alt="Buy Here" className="w-full h-auto mt-8 rounded-lg" />
         </div>
-
       </div>
 
     </aside>
