@@ -1,5 +1,3 @@
-import React from "react";
-
 const DashboardIcon = ({ className }) => {
   return (
     <svg

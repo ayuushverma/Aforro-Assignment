@@ -6,7 +6,7 @@ import mustafa from "../../assets/mustafa.jpg";
 const Navbar = () => {
   return (
     <header className="w-full sticky top-0 z-40 bg-[#FFFFFF]" style={{ top: '-18px' }}>
-      <div className="mx-auto w-full min-h-[80px] md:h-[120px] flex flex-col md:flex-row items-start md:items-center justify-between px-3 sm:px-4 md:px-8 py-3 md:py-0 gap-4 md:gap-0">
+      <div className="mx-auto w-full min-h-[80px] md:h-[120px] flex flex-col md:flex-row items-start md:items-center justify-between pl-16 pr-3 sm:pl-20 sm:pr-4 md:pl-20 md:pr-8 lg:px-8 py-3 md:py-0 gap-4 md:gap-0">
 
         {/* Dashboard */}
         <h1 className="text-xl sm:text-2xl md:text-[34px] font-bold text-[#1D2559] order-1">Dashboard</h1>

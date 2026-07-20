@@ -93,57 +93,59 @@ const Leaderboard = () => {
 
       {/* List / Table */}
       <div className="dashboard-card overflow-hidden">
-        <table className="w-full table-auto">
-          <thead>
-            <tr className="text-sm text-gray-500">
-              <th className="text-left px-6 py-4">Name</th>
-              <th className="text-left px-6 py-4">Email</th>
-              <th className="text-left px-6 py-4">City</th>
-              <th className="text-left px-6 py-4">Company</th>
-            </tr>
-          </thead>
-          <tbody>
-            {loading && (
-              <tr>
-                <td colSpan={4} className="px-6 py-8 text-center text-gray-500">
-                  Loading...
-                </td>
+        <div className="overflow-x-auto lg:overflow-x-visible">
+          <table className="w-full min-w-[720px] lg:min-w-0 table-auto">
+            <thead>
+              <tr className="text-sm text-gray-500">
+                <th className="text-left px-6 py-4">Name</th>
+                <th className="text-left px-6 py-4">Email</th>
+                <th className="text-left px-6 py-4">City</th>
+                <th className="text-left px-6 py-4">Company</th>
               </tr>
-            )}
-            {error && (
-              <tr>
-                <td colSpan={4} className="px-6 py-8 text-center text-red-500">
-                  {error}
-                </td>
-              </tr>
-            )}
-            {!loading && paged.length === 0 && (
-              <tr>
-                <td colSpan={4} className="px-6 py-8 text-center text-gray-500">
-                  No results
-                </td>
-              </tr>
-            )}
-            {paged.map((u) => (
-              <tr key={u.id} className="border-t">
-                <td className="px-6 py-4">
-                  <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-full bg-[#EEF2FF] flex items-center justify-center text-sm font-semibold text-[#23307A]">
-                      {u.name.split(" ").map((n) => n[0]).slice(0,2).join("")}
+            </thead>
+            <tbody>
+              {loading && (
+                <tr>
+                  <td colSpan={4} className="px-6 py-8 text-center text-gray-500">
+                    Loading...
+                  </td>
+                </tr>
+              )}
+              {error && (
+                <tr>
+                  <td colSpan={4} className="px-6 py-8 text-center text-red-500">
+                    {error}
+                  </td>
+                </tr>
+              )}
+              {!loading && paged.length === 0 && (
+                <tr>
+                  <td colSpan={4} className="px-6 py-8 text-center text-gray-500">
+                    No results
+                  </td>
+                </tr>
+              )}
+              {paged.map((u) => (
+                <tr key={u.id} className="border-t">
+                  <td className="px-6 py-4">
+                    <div className="flex items-center gap-3">
+                      <div className="w-10 h-10 rounded-full bg-[#EEF2FF] flex items-center justify-center text-sm font-semibold text-[#23307A]">
+                        {u.name.split(" ").map((n) => n[0]).slice(0,2).join("")}
+                      </div>
+                      <div>
+                        <div className="font-medium text-[#1D2559]">{u.name}</div>
+                        <div className="text-xs text-gray-400">{u.username}</div>
+                      </div>
                     </div>
-                    <div>
-                      <div className="font-medium text-[#1D2559]">{u.name}</div>
-                      <div className="text-xs text-gray-400">{u.username}</div>
-                    </div>
-                  </div>
-                </td>
-                <td className="px-6 py-4">{u.email}</td>
-                <td className="px-6 py-4">{u.address?.city}</td>
-                <td className="px-6 py-4">{u.company?.name}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
+                  </td>
+                  <td className="px-6 py-4">{u.email}</td>
+                  <td className="px-6 py-4">{u.address?.city}</td>
+                  <td className="px-6 py-4">{u.company?.name}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
       </div>
 
       {/* Pagination */}
