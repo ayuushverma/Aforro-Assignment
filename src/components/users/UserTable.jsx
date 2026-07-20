@@ -44,20 +44,20 @@ const UserTable = () => {
   return (
     <div className="bg-white p-6 rounded-2xl shadow-sm mt-8">
 
-      <div className="flex flex-wrap gap-4 justify-between mb-6">
+      <div className="mb-6 flex flex-wrap gap-3 sm:gap-4">
 
         <input
           type="text"
           placeholder="Search Name or Email"
           value={search}
           onChange={(e) => setSearch(e.target.value)}
-          className="border rounded-lg px-4 py-2 w-72"
+          className="w-full min-w-0 rounded-lg border px-4 py-2 sm:w-72"
         />
 
         <select
           value={city}
           onChange={(e) => setCity(e.target.value)}
-          className="border rounded-lg px-4 py-2"
+          className="min-w-[140px] flex-1 rounded-lg border px-4 py-2 sm:flex-none"
         >
           <option>All</option>
 
@@ -72,7 +72,7 @@ const UserTable = () => {
         </select>
 
         <button
-          className="bg-indigo-600 text-white px-4 rounded-lg"
+          className="min-h-10 min-w-[120px] flex-1 rounded-lg bg-indigo-600 px-4 py-2 text-white sm:flex-none"
           onClick={() =>
             setSortOrder((prev) =>
               prev === "asc" ? "desc" : "asc"

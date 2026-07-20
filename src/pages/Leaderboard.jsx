@@ -41,8 +41,8 @@ const Leaderboard = () => {
   const paged = filtered.slice((page - 1) * pageSize, page * pageSize);
 
   return (
-    <div className="p-8">
-      <div className="flex items-center justify-between mb-6">
+    <div className="p-4 sm:p-6 lg:p-8">
+      <div className="mb-6 flex items-center justify-between">
         <div>
           <h1 className="text-3xl font-bold text-[#1D2559]">Leaderboard</h1>
           <p className="text-sm text-gray-500">Top users and rankings</p>
@@ -50,8 +50,8 @@ const Leaderboard = () => {
       </div>
 
       {/* Controls */}
-      <div className="flex items-center gap-4 mb-6">
-        <div className="flex items-center w-[480px] h-[48px] bg-[#F9FAFB] rounded-[12px] px-4 gap-3">
+      <div className="mb-6 flex flex-wrap items-center gap-3 sm:gap-4">
+        <div className="flex h-[48px] w-full min-w-0 items-center gap-3 rounded-[12px] bg-[#F9FAFB] px-4 sm:w-[480px]">
           <img src={searchIcon} alt="search" className="h-5 w-5 text-[#5D5FEF]" />
           <input
             value={query}
@@ -61,7 +61,7 @@ const Leaderboard = () => {
             }}
             type="text"
             placeholder="Search by name, email or company"
-            className="ml-3 flex-1 bg-transparent outline-none text-sm placeholder:text-gray-400"
+            className="ml-3 min-w-0 flex-1 bg-transparent text-sm outline-none placeholder:text-gray-400"
           />
         </div>
 
@@ -71,7 +71,7 @@ const Leaderboard = () => {
             setCityFilter(e.target.value);
             setPage(1);
           }}
-          className="h-[48px] rounded-md border px-3 bg-white"
+          className="h-[48px] min-w-[150px] flex-1 rounded-md border bg-white px-3 sm:flex-none"
         >
           {cities.map((c) => (
             <option key={c} value={c}>
@@ -83,7 +83,7 @@ const Leaderboard = () => {
         <select
           value={sortBy}
           onChange={(e) => setSortBy(e.target.value)}
-          className="h-[48px] rounded-md border px-3 bg-white"
+          className="h-[48px] min-w-[150px] flex-1 rounded-md border bg-white px-3 sm:flex-none"
         >
           <option value="name-asc">Name A → Z</option>
           <option value="name-desc">Name Z → A</option>

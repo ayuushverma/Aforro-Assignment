@@ -29,8 +29,8 @@ const Sidebar = () => {
   const closeMobileSidebar = () => setIsMobileOpen(false);
 
   const sidebarContent = (
-    <div>
-      <div className="flex items-center gap-2 mb-8">
+    <div className="flex min-h-full flex-col">
+      <div className="mb-8 flex items-center gap-2">
         <div className="flex items-center gap-2">
           <img src={Dabanglogo} alt="Dabang Logo" className="w-10 h-10" />
           <h1 className="text-xl font-bold text-[#1D2559]">Dabang</h1>
@@ -45,7 +45,7 @@ const Sidebar = () => {
 
       </div>
 
-      <div className="relative lg:top-20 flex justify-center bg-white" >
+      <div className="mt-8 flex justify-center bg-white lg:mt-auto lg:pt-20" >
         <img src={buyhere} alt="Buy Here" className="w-[40%] lg:w-full h-[40%] lg:h-auto mt-8 rounded-lg" />
       </div>
     </div>
@@ -72,7 +72,7 @@ const Sidebar = () => {
       )}
 
       <aside
-        className={`fixed left-0 top-0 z-[60] flex h-screen w-[270px] max-w-[85vw] bg-white flex-col justify-between px-4 sm:px-6 py-6 pt-15 shadow-2xl transition-transform duration-300 lg:static lg:z-auto lg:flex lg:h-auto lg:w-[270px] lg:max-w-none lg:min-h-screen lg:self-stretch lg:translate-x-0 lg:shadow-none ${
+        className={`fixed left-0 top-0 z-[60] flex h-screen w-[270px] max-w-[85vw] flex-col overflow-y-auto bg-white px-4 py-6 pt-15 shadow-2xl transition-transform duration-300 sm:px-6 lg:static lg:z-auto lg:flex lg:h-auto lg:w-[270px] lg:max-w-none lg:min-h-screen lg:self-stretch lg:translate-x-0 lg:shadow-none ${
           isMobileOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >
