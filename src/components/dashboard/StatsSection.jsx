@@ -3,17 +3,17 @@ import { statsData } from "../../data/statsData";
 
 const StatsSection = () => {
   return (
-    <section className="mt-8">
+    <section className="mt-2 mx-1">
 
       <div className="flex justify-between items-center mb-5">
 
         <div>
 
-          <h2 className="text-2xl font-bold">
+          <h2 className="text-[20px] font-bold font-xl leading-8 text-[#05004E]">
             Today's Sales
           </h2>
 
-          <p className="text-gray-500">
+          <p className="text-[16px] font-normal leading-[30px] text-[#737791]">
             Sales Summary
           </p>
 

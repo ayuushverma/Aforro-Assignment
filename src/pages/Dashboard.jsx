@@ -10,23 +10,23 @@ import ProductTable from "../components/dashboard/ProductTable";
 import CountryMap from "../components/dashboard/CountryMap";
 import VolumeChart from "../components/dashboard/VolumeChart";
 
-import UserTable from "../components/users/UserTable";
+// import UserTable from "../components/users/UserTable";
 
 const Dashboard = () => {
   return (
-    <main className="flex-1 bg-[#F8F9FD] min-h-screen overflow-y-auto p-8">
+    <main className="flex-1 bg-gray-50 min-h-screen overflow-y-auto">
 
       {/* Navbar */}
-      <Navbar />
+      <Navbar />  
 
       {/* Row 1 */}
-      <section className="grid grid-cols-12 gap-6 mt-6">
+      <section className="grid grid-cols-12 gap-6 px-4">
 
-        <div className="col-span-8">
+        <div className="col-span-8 my-2 bg-white rounded-2xl shadow-sm p-5 h-[360px] min-h-[350px]">
           <StatsSection />
         </div>
 
-        <div className="col-span-4">
+        <div className="col-span-4 h-[360px] min-h-[350px] mt-2">
           <VisitorChart />
         </div>
 
@@ -34,7 +34,7 @@ const Dashboard = () => {
 
       {/* Row 2 */}
 
-      <section className="grid grid-cols-12 gap-6 mt-6">
+      <section className="grid grid-cols-12 gap-6 mt-6 px-4">
 
         <div className="col-span-6">
           <RevenueChart />
@@ -52,7 +52,7 @@ const Dashboard = () => {
 
       {/* Row 3 */}
 
-      <section className="grid grid-cols-12 gap-6 mt-6">
+      <section className="grid grid-cols-12 gap-6 mt-6 px-4">
 
         <div className="col-span-6">
           <ProductTable />
@@ -66,12 +66,6 @@ const Dashboard = () => {
           <VolumeChart />
         </div>
 
-      </section>
-
-      {/* Users Table */}
-
-      <section className="mt-6">
-        <UserTable />
       </section>
 
     </main>
